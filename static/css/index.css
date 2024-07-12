@@ -1,0 +1,41 @@
+span{
+    text-decoration: underline;
+}
+.container{
+    width: 100%;
+    min-height: 100px;
+    border: thin solid rgb(132, 132, 132);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+.container .schedule{
+    border: thin solid rgb(132, 132, 132);
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    gap: 20px;
+}
+.container .schedule h3{
+    font-size: 1.5em;
+}
+.container .schedule .time{
+    display: flex;
+    gap: 40px;
+    margin-top: 4px;
+}
+.scheduleends{
+    color: green;
+    margin-top: 20px;
+}
+.scheduleends i {
+    margin-left: 15px;
+}
+@media (max-width: 1000px) {
+    .container{
+        grid-template-columns: 1fr;
+    }
+}

@@ -12,6 +12,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'images/favicon/site.webmanifest'%}">
     <link rel="icon" href="{% static 'images/favicon/favicon.ico' %}" type="image/x-icon">
+    {% block link %}
+        
+    {% endblock %}
 
     <title>
         {% block pagetitle %}
@@ -137,5 +140,7 @@
     </header>
     <script src="{% static 'js/base.js' %}"></script>
 </body>
-
+{% block script %}
+    
+{% endblock %}
 </html>

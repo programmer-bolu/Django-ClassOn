@@ -1,8 +1,37 @@
 {% extends 'base.html' %}
 
+{% block link %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css'%}">
+{% endblock %}
+
+
 {% block content %}
+<div class="container">
     {% for items in schedules %}
-        {{items.class_date}}
-        {{date}}
+    <div class="schedule">
+        <h3 class="cohourt">Cohourt <span>{{items.Students_Cohourt}}</span></h3>
+        <p class="date"><strong>Date: <span>{{items.class_date}}</span></strong></p>
+        <p class="time">
+                <strong>
+                    Start-Time: <span>{{items.Starts}}</span>
+                </strong>
+
+                <strong>
+                    End-Time: <span>{{items.Ends}}</span>
+                </strong>
+                
+        </p>
+        <ul>
+            <p>Students Must know: <span><strong>{{items.What_Students_Should_Read_About}}</strong></span></p>
+        </ul>
+        <ul>
+            <p>Student Will Be Taught: <span><strong>{{items.What_Will_Be_taught}}</strong></span></p>
+        </ul>
+        <h3 class="scheduleends">
+            HAPPY CODING <i class="fa-solid fa-computer-classic"></i>
+        </h3>
+    </div>
     {% endfor %}
+</div>
 {% endblock %}
