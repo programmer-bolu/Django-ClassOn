@@ -8,6 +8,8 @@ class schedule(models.Model):
     What_Students_Should_Read_About = models.TextField(max_length=None)
     What_Will_Be_taught = models.TextField(max_length=None)
     Students_Cohourt = models.IntegerField()
+    instructor = models.CharField(max_length = 150, default='Mr Iyanu')
+    
 
     def __str__(self):
         return f'Cohourt={self.Students_Cohourt}, Date={self.class_date}'

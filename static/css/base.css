@@ -14,21 +14,25 @@
 body {
     background-color: rgb(247, 247, 247);
 }
-
 /* NAVBAR */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100px;
+    height: 70px;
     margin: 10px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.466);
     font-size: larger;
     position: relative;
+    background-color: rgb(247, 247, 247);
 }
 
 .navbar .nav-brand {
     margin-left: 20px;
+}
+
+.nav-items {
+    background-color: rgb(247, 247, 247);
 }
 
 .nav-items ul {
@@ -102,6 +106,15 @@ body {
     stroke-dashoffset: -32.42;
 }
 
+.searchcohourt {
+    display: none;
+}
+
+.search {
+    display: none;
+}
+
+/* MAIN CONTENT */
 main {
     margin: 10px;
 }
@@ -144,12 +157,14 @@ footer p {
     font-size: large;
     text-align: center;
 }
-.social-icons{
+
+.social-icons {
     display: flex;
     background: rgb(132, 132, 132);
     margin-top: 20px;
     justify-content: center;
 }
+
 .social-icons .button {
     cursor: pointer;
     width: 50px;
@@ -223,29 +238,80 @@ footer p {
 
     .nav-items {
         display: block;
-        width: 100%;
+        width: 0;
+        max-height: 100vh;
         position: absolute;
-        top: 102%;
-        max-height: 0;
-        background: rgb(132, 132, 132);
+        top: 100%;
+        left: -10px;
         overflow: hidden;
         transition: .5s ease;
+        border-top: 2px solid rgb(132, 132, 132);
+        border-bottom: 2px solid rgb(132, 132, 132);
         z-index: 10;
-        border-radius: 0px 0px 5px 5px;
+        border-radius: 0px 0px 5px 0px;
+        flex-wrap: nowrap;
+        text-wrap: nowrap;
+        white-space: nowrap;
     }
 
     .nav-items.show {
+        border-right: 2px solid rgb(132, 132, 132);
         transition: .5s ease;
-        max-height: 1000px;
+        width: 300px;
     }
 
     .nav-items ul {
         display: block;
-
+        padding-top: 10px;
     }
 
     .nav-items ul li {
-        padding: 5px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .search {
+        padding: 10px;
+        display: block;
+        flex-wrap: nowrap;
+        text-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        text-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .search button {
+        padding: 7px 10px;
+        border: none;
+        margin-top: 10px;
+        color: white;
+        background-color: black;
+        border-radius: 5px;
+    }
+
+    .search select {
+        height: 30px;
+    }
+
+    .searchcohourt {
+        padding: 10px;
+        margin-top: 10px;
+        display: block;
+        border-radius: 5px;
+        border: none !important;
+        transition: .3s;
+        width: 100% !important;
+    }
+
+    .searchcohourt:focus {
+        border: none;
+        outline: thin solid rgb(132, 132, 132) !important;
     }
 
     .nav-items ul li::before {
@@ -268,7 +334,7 @@ footer p {
 
     .nav-items ul li {
         padding: 10px 5px;
-        font-size: calc(1vw + 10px);
+        font-size: calc(1vw + 15px);
     }
 
     footer p {
@@ -278,5 +344,8 @@ footer p {
 
     footer .sitename h1 {
         font-size: 2em;
+    }
+    .nav-items.show{
+        width: 250px;
     }
 }
