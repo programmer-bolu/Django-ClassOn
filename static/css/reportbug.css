@@ -1,0 +1,88 @@
+.container-hero {
+    border: thin solid rgb(132, 132, 132);
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+}
+
+.container-hero .t {
+    text-align: start;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+
+form input {
+    display: block;
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    outline: none !important;
+    background: transparent;
+    border: thin solid rgba(132, 132, 132, 0.377);
+    transition: .3s;
+}
+
+form textarea {
+    width: 90%;
+    margin-top: 10px;
+    padding: 10px;
+    resize: none;
+    border: 10px;
+    border-radius: 5px;
+    height: 300px;
+    outline: none !important;
+    background: transparent;
+    border: thin solid rgba(132, 132, 132, 0.377);
+    transition: .3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border: thin solid rgba(132, 132, 132) !important;
+}
+
+form button {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.514), rgb(137, 137, 137));
+    color: white;
+    border: 1px solid transparent;
+    margin-left: 5%;
+}
+
+form button:hover {
+    border: 1px solid rgb(132, 132, 132);
+    background: transparent;
+    color: black;
+}
+
+@media (max-width: 568px) {
+
+    form input {
+        width: 100%;
+    }
+
+    form textarea {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2;
+    }
+
+    form button {
+        margin: 0;
+    }
+
+    .container-hero .t {
+        margin-left: 0;
+    }
+
+    .container-hero h1 {
+        font-size: calc(2vw + 15px);
+    }
+}

@@ -116,7 +116,9 @@ body {
 .search {
     display: none;
 }
-
+.d-lg-none {
+    margin-right: 10px;
+}
 /* MAIN CONTENT */
 main {
     margin: 10px;
@@ -247,6 +249,7 @@ footer p {
         overflow: hidden !important;
         max-height: 0px !important;
         transition: .5s ease;
+        padding-top: 0;
     }
 
     .nav-items.show {
@@ -256,7 +259,6 @@ footer p {
 
     .nav-items ul {
         display: block;
-        padding-top: 10px;
     }
 
     .nav-items ul li {
@@ -266,10 +268,6 @@ footer p {
 
     .nav-items ul li::before {
         display: none;
-    }
-
-    .d-lg-none {
-        margin-right: 5px;
     }
 
     footer p {
