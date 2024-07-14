@@ -5,6 +5,5 @@ def index(request):
     schedules = schedule.objects.all()
     format_schedule = schedules[::-1]
 
-    
     return render(request, 'pages/index.html', {'schedules': format_schedule})
 
