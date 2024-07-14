@@ -14,6 +14,7 @@
 body {
     background-color: rgb(247, 247, 247);
 }
+
 /* NAVBAR */
 .navbar {
     display: flex;
@@ -30,10 +31,12 @@ body {
 .navbar .nav-brand {
     margin-left: 20px;
 }
-.navbar .nav-brand div{
+
+.navbar .nav-brand div {
     display: flex;
     justify-content: space-between;
 }
+
 .nav-items {
     background-color: rgb(247, 247, 247);
 }
@@ -46,21 +49,40 @@ body {
 
 .nav-items ul li {
     position: relative;
-    padding: 0px 5px;
+    display: flex;
+    justify-content: center;
 }
 
-.nav-items ul li::before {
-    content: '';
+.nav-items ul li .tooltip {
     position: absolute;
-    height: 100%;
-    width: 0px;
-    border-bottom: 2px solid black;
-    transition: .3s;
-    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: .7em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: none;
+    text-transform: uppercase;
 }
 
-.nav-items ul li:hover::before {
-    width: 100%;
+.nav-items ul li .tooltip .angle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: black;
+    top: -3px;
+}
+.nav-items ul li:hover .tooltip {
+    visibility: visible;
+    top: 35px;
+    opacity: 1;
+    transition: .3s ease;
 }
 
 /* NAVBAR TOOGLE */
@@ -116,9 +138,11 @@ body {
 .search {
     display: none;
 }
+
 .d-lg-none {
     margin-right: 10px;
 }
+
 /* MAIN CONTENT */
 main {
     margin: 10px;
@@ -232,11 +256,12 @@ footer p {
 }
 
 @media (max-width: 1000px) {
-    .navbar{
+    .navbar {
         max-height: 500px;
         display: block;
         border-bottom: none;
     }
+
     .tooglenav {
         display: block;
     }

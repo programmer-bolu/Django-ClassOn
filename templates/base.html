@@ -17,7 +17,7 @@
 
     <title>
         {% block pagetitle %}
-        ClassOn
+        ClassGr
         {% endblock %}
     </title>
 </head>
@@ -31,7 +31,7 @@
             <div class="nav-brand">
                 <div>
                     <a href="{% url 'home'%}">
-                        <h2>Class <i class="fa-solid fa-bell-school"></i></h2>
+                        <h2>ClassGr <i class="fa-solid fa-bell-school"></i></h2>
                     </a>
 
                     <button class="tooglenav" id="toogle-nav-collapse">
@@ -49,14 +49,37 @@
             </div>
             <div class="nav-items" id="navbar-nav">
                 <ul>
-                    <a href="{% url 'home'%}">
-                        <li><i class="d-lg-none fa-solid fa-house"></i>Home</li>
+                    <a href="{% url 'home'%}" class="wrapper">
+                        <li class="icon-content">
+                            <i class="fa-solid fa-house"></i>
+                            <div class="tooltip">
+                                <div class="angle"></div> Home
+                            </div>
+                        </li>
                     </a>
-                    <a href="{% url 'infoadmin'%}">
-                        <li><i class="d-lg-none fa-solid fa-user"></i>Admin</li>
+                    <a href="">
+                        <li class="icon-content">
+                            <i class="d-lg-none fa-solid fa-user"></i>
+                            <div class="tooltip">
+                                <div class="angle"></div> User
+                            </div>
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="icon-content">
+                            <i class="fa-solid fa-sitemap"></i>
+                            <div class="tooltip">
+                                <div class="angle"></div> Organisation
+                            </div>
+                        </li>
                     </a>
                     <a href="{% url 'reportbug'%}">
-                        <li><i class="d-lg-none fa-solid fa-bug"></i>Report a Bug</li>
+                        <li class="icon-content">
+                            <i class="d-lg-none fa-solid fa-bug"></i>
+                            <div class="tooltip">
+                                <div class="angle"></div> Feed Back
+                            </div>
+                        </li>
                     </a>
                 </ul>
             </div>
