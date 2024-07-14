@@ -1,0 +1,4 @@
+.container-hero{
+    border: thin solid rgb(132, 132, 132);
+    display: flex;
+}
