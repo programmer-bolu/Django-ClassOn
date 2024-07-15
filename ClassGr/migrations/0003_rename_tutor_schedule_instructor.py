@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ClassOn', '0002_schedule_tutor'),
+        ('ClassGr', '0002_schedule_tutor'),
     ]
 
     operations = [

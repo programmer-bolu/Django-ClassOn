@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right, rgba(13, 104, 139, 0.856), rgba(0, 0, 0, 0.747)), url(../images/hero-image-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    color: white;
+}
+
+.container .hero-content {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.container .hero-content h1 {
+    font-size: calc(2vw + 10px);
+    width: 40%;
+    margin: auto;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.container .hero-content p {
+    width: 40%;
+    line-height: 30px;
+    text-align: center;
+    margin: auto;
+
+}
+
+.container .hero-content button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: rgb(19, 159, 215);
+    border: 2px solid rgb(19, 159, 215);
+    margin-top: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.container .hero-content button:hover {
+    border: 2px solid white;
+}
+
+/* CARDS */
+.feature-cards {
+    min-height: 300px;
+    width: 1200px;
+    margin: 50px auto;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.05);
+}
+
+.feature-cards .cards {
+    /* border: thin solid red; */
+    width: 25%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.feature-cards .cards::before {
+    content: '';
+    position: absolute;
+    border: thin solid rgba(0, 0, 0, 0.137);
+    height: 50%;
+    top: 25%;
+    left: 0;
+}
+
+.feature-cards .cards:first-child::before {
+    display: none;
+}
+
+.feature-cards .icon {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(19, 159, 215, 0.103);
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3em;
+}
+
+.feature-cards p {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-family: "Exo 2", sans-serif;
+}
+
+.feature-cards .content {
+    background-color: rgb(19, 159, 215);
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    color: white;
+}
+
+.feature-cards .cards:hover .content {
+    height: 100%;
+}
+
+.feature-cards .content h2 {
+    margin-top: 40px;
+}
+
+.feature-cards .content p {
+    width: 80%;
+    font-family: poppins;
+    margin: auto;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.feature-cards .content a {
+    color: white;
+    display: inline-block;
+    margin-top: 20px;
+    border-bottom: thin solid white;
+}
+
+.feature-cards .content a:hover i {
+    transform: translateX(10px);
+}
+
+/* RESPONSIVENESS MEDIA QUERY */
+
+@media (max-width: 1220px) {
+    .feature-cards {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .feature-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-cards .cards {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .feature-cards .cards::before {
+        display: none;
+    }
+
+    .feature-cards .cards:first-child {
+        border-bottom: thin solid rgba(0, 0, 0, 0.137);
+        border-right: thin solid rgba(0, 0, 0, 0.137);
+    }
+
+    .feature-cards .cards:nth-of-type(3) {
+        border-right: thin solid rgba(0, 0, 0, 0.137);
+    }
+
+    .feature-cards .cards:nth-of-type(2) {
+        border-bottom: thin solid rgba(0, 0, 0, 0.137);
+    }
+
+    .container .hero-content p,
+    .container .hero-content h1 {
+        width: 80%;
+        line-height: 30px;
+    }
+}
+
+
+@media (max-width: 597px) {
+    .container .hero-content p {
+        width: 100%;
+        line-height: 23px;
+        font-size: calc(1vw + 10px);
+    }
+
+    .feature-cards .cards {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .feature-cards .cards p {
+        font-size: calc(1vw + 10px);
+    }
+
+    .feature-cards .content h2 {
+        margin-top: 10px;
+        font-size: calc(1vw + 14px);
+    }
+
+    .feature-cards .content p {
+        width: 90%;
+        margin-top: 10px;
+        font-size: calc(1vw + 9px);
+    }
+
+    .feature-cards .content a {
+        margin-top: 10px;
+        font-size: calc(1vw + 8px);
+    }
+}

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ClassonConfig(AppConfig):
+class ClassgrConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'ClassOn'
+    name = 'ClassGr'

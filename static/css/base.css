@@ -8,7 +8,6 @@
     font-family: poppins;
     list-style: none;
     transition: all .3s;
-    color: black;
 }
 
 body {
@@ -22,10 +21,11 @@ body {
     justify-content: space-between;
     max-height: 70px;
     margin: 10px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.466);
     font-size: larger;
     position: relative;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(19, 159, 215);
+    padding: 10px 0;
+    border-radius: 10px;
 }
 
 .navbar .nav-brand {
@@ -37,25 +37,27 @@ body {
     justify-content: space-between;
 }
 
-.nav-items {
-    background-color: rgb(247, 247, 247);
+.navbar .nav-brand div a {
+    color: white;
 }
 
 .nav-items ul {
     display: flex;
     gap: 30px;
     margin-right: 20px;
+    margin-right: 100px;
 }
 
 .nav-items ul li {
     position: relative;
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 .nav-items ul li .tooltip {
     position: absolute;
-    background-color: black;
+    background-color: rgb(15, 127, 172);
     color: white;
     font-size: .7em;
     padding: 5px 10px;
@@ -68,6 +70,8 @@ body {
     visibility: hidden;
     transition: none;
     text-transform: uppercase;
+    z-index: 3;
+    text-wrap: nowrap;
 }
 
 .nav-items ul li .tooltip .angle {
@@ -75,9 +79,10 @@ body {
     height: 10px;
     position: absolute;
     transform: rotate(45deg);
-    background-color: black;
+    background-color: rgb(15, 127, 172);
     top: -3px;
 }
+
 .nav-items ul li:hover .tooltip {
     visibility: visible;
     top: 35px;
@@ -109,7 +114,7 @@ body {
 
 .line {
     fill: none;
-    stroke: black;
+    stroke: white;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
@@ -150,7 +155,7 @@ main {
 
 /* FOOTER */
 footer {
-    background-color: rgb(132, 132, 132) !important;
+    background-color: rgb(19, 159, 215) !important;
     margin: 10px;
     color: black;
     padding: 10px;
@@ -189,7 +194,7 @@ footer p {
 
 .social-icons {
     display: flex;
-    background: rgb(132, 132, 132);
+    background: rgb(19, 159, 215);
     margin-top: 20px;
     justify-content: center;
 }
@@ -243,7 +248,7 @@ footer p {
     position: absolute;
     width: 55px;
     height: 55px;
-    background-color: rgb(132, 132, 132);
+    background-color: rgb(19, 159, 215);
     border-radius: 50px;
     z-index: -1;
     border: 0px solid rgba(255, 255, 255, 0.411);
@@ -264,11 +269,12 @@ footer p {
 
     .tooglenav {
         display: block;
+        margin-right: 20px;
     }
 
     .nav-items {
         display: block;
-        border: thin solid rgb(132, 132, 132);
+        border: thin solid rgb(19, 159, 215);
         border-radius: 2px;
         width: 100%;
         overflow: hidden !important;
@@ -301,9 +307,6 @@ footer p {
 }
 
 @media (max-width: 568px) {
-    .navbar .nav-brand {
-        margin: 0;
-    }
 
     .nav-items ul li {
         padding: 10px 5px;

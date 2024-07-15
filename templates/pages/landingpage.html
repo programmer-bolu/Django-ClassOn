@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block link %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/landingpage.css'%}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <!-- HERO PAGE -->
+    <div class="hero-content">
+        <h1>Ultimate Hub for Academic Organization.</h1>
+        <p>
+            Join an organization or classroom and stay informed with the latest class schedules, important updates, and
+            upcoming
+            events. With ClassGr, you'll never miss a class or assignment again. Stay connected with your peers and
+            instructors,
+            access study materials, and manage your academic life efficiently. Whether you’re a student or a teacher,
+            ClassGr
+            provides all the tools you need to succeed in a collaborative and organized learning environment.
+        </p>
+        <a href=""><button>Get Started</button></a>
+    </div>
+</div>
+
+
+
+<!-- CARD - FEATURES -->
+
+<div class="feature-cards">
+    <div class="cards">
+        <div>
+            <div class="icon">
+                <i class="fa-duotone fa-sitemap"
+                    style="--fa-primary-color: #139fd7; --fa-secondary-color: #0f7fac;"></i>
+            </div>
+            <p>Organisations</p>
+            <div class="content">
+                <h2>Organisations</h2>
+
+                <p>
+                    Create an Organisation, approve students and Instructors, control the enviroment, Register and
+                    Approve admins.
+                </p>
+
+                <a href="">Create an Organisation <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="cards">
+        <div>
+            <div class="icon">
+                <i class="fa-duotone fa-user" style="--fa-primary-color: #139fd7; --fa-secondary-color: #0f7fac;"></i>
+            </div>
+            <p>Student</p>
+            <div class="content">
+                <h2>Students</h2>
+
+                <p>
+                    Register as a student, join an organisation, view class schedules, prepare ahead of classes contact your instructors.
+                </p>
+
+                <a href="">Join Now <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div>
+            <div class="icon">
+                <i class="fa-duotone fa-user-tie-hair"
+                    style="--fa-primary-color: #139fd7; --fa-secondary-color: #0f7fac;"></i>
+            </div>
+            <p>Admins</p>
+            <div class="content">
+                <h2>Admins</h2>
+                <p>
+                    Register as admin, get verified be orgaization,  approve students and Instructors, Register and Approve admins.
+                </p>
+                
+                <a href="">Register as Admin <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div>
+            <div class="icon">
+                <i class="fa-duotone fa-calendar-lines-pen"
+                    style="--fa-primary-color: #139fd7; --fa-secondary-color: #0f7fac;"></i>
+            </div>
+            <p>instructor</p>
+            <div class="content">
+                <h2>Instructors</h2>
+                <p>
+                    Register as Instructor, join organisation, get verified, Create and update class schedule.
+                </p>
+                
+                <a href="">Register as an Instructor <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- NORM FEAUTRES -->
+
+<div class="features">
+    
+</div>
+
+{% endblock %}
