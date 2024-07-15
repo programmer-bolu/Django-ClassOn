@@ -7,28 +7,31 @@
 
 
 {% block content %}
-<div class="container">
-    <!-- HERO PAGE -->
-    <div class="hero-content">
-        <h1>Ultimate Hub for Academic Organization.</h1>
-        <p>
-            Join an organization or classroom and stay informed with the latest class schedules, important updates, and
-            upcoming
-            events. With ClassGr, you'll never miss a class or assignment again. Stay connected with your peers and
-            instructors,
-            access study materials, and manage your academic life efficiently. Whether you’re a student or a teacher,
-            ClassGr
-            provides all the tools you need to succeed in a collaborative and organized learning environment.
-        </p>
-        <a href=""><button>Get Started</button></a>
+<!-- HERO CONTENT -->
+<section>
+    <div class="container">
+        <!-- HERO PAGE -->
+        <div class="hero-content">
+            <h1>Ultimate Hub for Academic Organization.</h1>
+            <p>
+                Join an organization or classroom and stay informed with the latest class schedules, important updates, and
+                upcoming
+                events. With ClassGr, you'll never miss a class or assignment again. Stay connected with your peers and
+                instructors,
+                access study materials, and manage your academic life efficiently. Whether you’re a student or a teacher,
+                ClassGr
+                provides all the tools you need to succeed in a collaborative and organized learning environment.
+            </p>
+            <a href=""><button>Get Started</button></a>
+        </div>
     </div>
-</div>
 
+</section>
 
 
 <!-- CARD - FEATURES -->
 
-<div class="feature-cards">
+<section class="feature-cards">
     <div class="cards">
         <div>
             <div class="icon">
@@ -101,14 +104,40 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 
 <!-- NORM FEAUTRES -->
 
-<div class="features">
-    
-</div>
+<section class="features">
+    <h2>Features</h2>
+    <div class="container-2">
+        <div class="feature-item">
+            <img src="{% static 'images/organisation-1.jpg'%}" alt="Feature 1">
+            <div class="feature-idea">
+                <div>
+                    <h3>Join Organizations</h3>
+                    <p>Easily join your classroom or organization to access class schedules and announcements.</p>
+                </div>
+            </div>
+        </div>
+        <div class="feature-item">
+            <img src="{% static 'images/update-1.jpg'%}" alt="Feature 1">
+            <div class="feature-idea">
+                <div>
+                    <h3>Stay Informed</h3>
+                    <p>Admins can post class schedules, so you never miss an important update.</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="feature-item">
+            <img src="feature3.jpg" alt="Feature 3">
+            <h3>Easy to Use</h3>
+            <p>Our user-friendly interface makes it easy for both students and admins to navigate.</p>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

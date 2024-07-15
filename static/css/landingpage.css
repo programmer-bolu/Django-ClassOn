@@ -144,6 +144,50 @@
 .feature-cards .content a:hover i {
     transform: translateX(10px);
 }
+.features{
+    background: rgb(19, 159, 215);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+.features .container-2{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.features .container-2 .feature-item{
+    width: 30%;
+    height: auto;
+    position: relative;
+}
+
+.features .container-2 .feature-item img{
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+.features .container-2 .feature-item .feature-idea{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left, rgba(13, 104, 139, 0.856), rgba(0, 0, 0, 0.747));
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.features .container-2 .feature-item .feature-idea div{
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+
+
+
 
 /* RESPONSIVENESS MEDIA QUERY */
 
