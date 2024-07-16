@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block pagetitle %}
-    Create Account | ClassGr
+Create Account | ClassGr
 {% endblock %}
 
 {% block link %}
@@ -11,31 +11,61 @@
 
 {% block content %}
 <div class="container">
-    {% for items in schedules %}
-    <div class="schedule">
-        <h3 class="cohourt">Cohourt <span>{{items.Students_Cohourt}}</span></h3>
-        <p class="date"><strong>Date: <span>{{items.class_date}}</span></strong></p>
-        <p class="time">
-                <strong>
-                    Starts: <span>{{items.Starts}}</span>
-                </strong>
+    !DOCTYPE html>
+    <html lang="en">
 
-                <strong>
-                    Ends: <span>{{items.Ends}}</span>
-                </strong>
-                
-        </p>
-        <ul>
-            <p>Students Should Read: <span class="element"><strong>"{{items.What_Students_Should_Read_About}}"</strong></span></p>
-        </ul>
-        <ul>
-            <p>Student Will Be Taught: <span class="element"><strong>"{{items.What_Will_Be_taught}}"</strong></span></p>
-        </ul>
-        <p>Instructor: <span><strong>{{items.instructor}}</strong></span></p>
-        <h3 class="scheduleends">
-            HAPPY CODING <i class="fa-solid fa-computer-classic"></i>
-        </h3>
-    </div>
-    {% endfor %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Account | ClassGr</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Create an Account</h1>
+            <p>Select the type of account you want to create.</p>
+        </header>
+
+        <section class="account-types">
+            <div class="account-type">
+                <h2>Organization</h2>
+                <p>Manage classes, schedules, and communicate with students. Ideal for schools, colleges, and other
+                    educational institutions.</p>
+                <button onclick="selectAccountType('organization')">Select</button>
+            </div>
+            <div class="account-type">
+                <h2>Student</h2>
+                <p>Join classes, view schedules, and keep track of your academic progress. Perfect for students at all
+                    levels.</p>
+                <button onclick="selectAccountType('student')">Select</button>
+            </div>
+            <div class="account-type">
+                <h2>Admin</h2>
+                <p>Oversee all activities, manage users, and ensure smooth operation of the platform. Suitable for
+                    administrators and coordinators.</p>
+                <button onclick="selectAccountType('admin')">Select</button>
+            </div>
+            <div class="account-type">
+                <h2>Instructor</h2>
+                <p>Create and manage classes, upload materials, and interact with students. Designed for teachers and
+                    instructors.</p>
+                <button onclick="selectAccountType('instructor')">Select</button>
+            </div>
+        </section>
+
+        <script>
+            function selectAccountType(type) {
+                alert(`You have selected the ${type} account type.`);
+                // Redirect to the appropriate form page based on the selected type
+                // window.location.href = `${type}-signup.html`;
+            }
+        </script>
+    </body>
+
+    </html>
+
+</div>
+{% endfor %}
 </div>
 {% endblock %}

@@ -118,6 +118,14 @@
     color: white;
 }
 
+.feature-cards .cards:nth-of-type(1) .content {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.feature-cards .cards:nth-of-type(4) .content {
+    border-radius: 0px 5px 5px 0px;
+}
+
 .feature-cards .cards:hover .content {
     height: 100%;
 }
@@ -430,6 +438,22 @@
 
     .feature-cards .cards:nth-of-type(2) {
         border-bottom: thin solid rgba(0, 0, 0, 0.137);
+    }
+
+    .feature-cards .cards:nth-of-type(1) .content {
+        border-radius: 5px 0px 0px 0px;
+    }
+
+    .feature-cards .cards:nth-of-type(2) .content {
+        border-radius: 0px 5px 0px 0px;
+    }
+
+    .feature-cards .cards:nth-of-type(3) .content {
+        border-radius: 0px 0px 0px 5px;
+    }
+
+    .feature-cards .cards:nth-of-type(4) .content {
+        border-radius: 0px 0px 5px 0px;
     }
 
     .container .hero-content p,
