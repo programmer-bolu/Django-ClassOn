@@ -144,32 +144,44 @@
 .feature-cards .content a:hover i {
     transform: translateX(10px);
 }
-.features{
+
+.features {
     background: rgb(19, 159, 215);
     padding: 10px;
+    padding-bottom: 30px;
     border-radius: 5px;
     color: white;
 }
-.features .container-2{
+
+.features .container-2 {
     display: flex;
     align-items: center;
     margin-top: 10px;
     justify-content: space-evenly;
 }
-.features .container-2 .feature-item{
+
+.features .container-2 .feature-item {
     width: 30%;
     height: auto;
     position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.features .container-2 .feature-item img{
+.features .container-2 .feature-item:hover img {
+    transform: scale(1.3);
+}
+
+.features .container-2 .feature-item img {
     width: 100%;
     border-radius: 10px;
     height: 300px;
     object-position: top;
     object-fit: cover;
 }
-.features .container-2 .feature-item .feature-idea{
+
+.features .container-2 .feature-item .feature-idea {
     position: absolute;
     top: 0;
     height: 100%;
@@ -181,13 +193,187 @@
     align-items: center;
     justify-content: center;
 }
-.features .container-2 .feature-item .feature-idea div{
+
+.features .container-2 .feature-item .feature-idea div {
     width: 100%;
     padding: 10px;
 }
 
+#how-it-works {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
 
+#how-it-works .container-3 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* Section title */
+#how-it-works h2 {
+    text-align: center;
+    color: #136fd7;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Steps container */
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Individual step */
+.step {
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+    max-width: 350px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+/* Step hover effect */
+.step:hover {
+    transform: translateY(-10px);
+}
+
+/* Step digit */
+.digit {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: #136fd7;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Step image */
+.step img {
+    max-width: 50px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+/* Step title */
+.step h3 {
+    color: #136fd7;
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+/* Step description */
+.step p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* CTA Section Styling */
+.cta-section {
+    background-color: rgb(19, 159, 215);
+    /* Primary color */
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+/* CTA Content Styling */
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* CTA Heading Styling */
+.cta-heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* CTA Description Styling */
+.cta-description {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+/* CTA Button Styling */
+.cta-button {
+    background-color: white;
+    color: rgb(19, 159, 215);
+    font-size: 1.2em;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: rgb(255, 255, 255, 0.8);
+    /* Lighter white on hover */
+    color: rgb(19, 159, 215, 0.8);
+    /* Lighter primary color on hover */
+}
+
+#faq {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+#faq .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#faq h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #139fd7;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #666;
+}
 
 
 
@@ -197,6 +383,24 @@
 @media (max-width: 1220px) {
     .feature-cards {
         width: 100%;
+    }
+
+    .cta-heading,
+    #how-it-works h2 {
+        font-size: 2em;
+    }
+
+    .cta-description {
+        font-size: 1.1em;
+    }
+
+    .cta-button {
+        font-size: 1.1em;
+        padding: 12px 24px;
+    }
+
+    .step h3 {
+        font-size: 1.5em;
     }
 }
 
@@ -233,8 +437,77 @@
         width: 80%;
         line-height: 30px;
     }
+
+    .features .container-2 {
+        display: block;
+    }
+
+    .features .container-2 .feature-item {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .cta-heading,
+    #how-it-works h2 {
+        font-size: 1.8em;
+    }
+
+    .cta-description {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .step h3 {
+        font-size: 1.1em;
+    }
 }
 
+@media (max-width: 870px) {
+    .steps {
+        flex-direction: column;
+    }
+
+    .step {
+        margin: 0 auto 20px;
+        max-width: 90%;
+    }
+
+    .digit {
+        top: -20px;
+        left: calc(50% - 25px);
+        /* Center the digit */
+    }
+
+    .cta-heading,
+    #how-it-works h2 {
+        font-size: 1.6em;
+    }
+
+    .cta-description {
+        font-size: 0.9em;
+    }
+
+    .cta-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    #faq h2 {
+        font-size: 28px;
+    }
+
+    .faq-item h3 {
+        font-size: 20px;
+    }
+
+    .faq-item p {
+        font-size: 14px;
+    }
+}
 
 @media (max-width: 597px) {
     .container .hero-content p {
@@ -266,5 +539,19 @@
     .feature-cards .content a {
         margin-top: 10px;
         font-size: calc(1vw + 8px);
+    }
+
+    .cta-heading,
+    #how-it-works h2 {
+        font-size: 1.4em;
+    }
+
+    .cta-description {
+        font-size: 0.8em;
+    }
+
+    .cta-button {
+        font-size: 0.8em;
+        padding: 6px 12px;
     }
 }

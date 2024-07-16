@@ -3,6 +3,6 @@ from django.urls import path
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('reportbug/', TemplateView.as_view(template_name='pages/reportbug.html'), name='reportbug'),
+    path('', TemplateView.as_view(template_name='static-pages/home.html'), name='home'),
+    path('signup/', TemplateView.as_view(template_name='static-pages/createanaccount.html'), name='createaccount'),
 ]

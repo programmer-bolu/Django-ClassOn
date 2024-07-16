@@ -2,7 +2,7 @@
 
 {% block link %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/landingpage.css'%}">
+<link rel="stylesheet" href="{% static 'css/home.css'%}">
 {% endblock %}
 
 
@@ -22,7 +22,7 @@
                 ClassGr
                 provides all the tools you need to succeed in a collaborative and organized learning environment.
             </p>
-            <a href=""><button>Get Started</button></a>
+            <a href="{% url 'createaccount'%}"><button>Get Started</button></a>
         </div>
     </div>
 
@@ -47,7 +47,7 @@
                     Approve admins.
                 </p>
 
-                <a href="">Create an Organisation <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="{% url 'createorganization'%}">Create an Organisation <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@
                     Register as a student, join an organisation, view class schedules, prepare ahead of classes contact your instructors.
                 </p>
 
-                <a href="">Join Now <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="{% url 'createstudent'%}">Join Now <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -82,7 +82,7 @@
                     Register as admin, get verified be orgaization,  approve students and Instructors, Register and Approve admins.
                 </p>
                 
-                <a href="">Register as Admin <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="{% url 'createadmin'%}">Register as Admin <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -100,7 +100,7 @@
                     Register as Instructor, join organisation, get verified, Create and update class schedule.
                 </p>
                 
-                <a href="">Register as an Instructor <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="{% url 'createinstructor'%}">Register as an Instructor <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </div>
@@ -133,11 +133,89 @@
             
         </div>
         <div class="feature-item">
-            <img src="feature3.jpg" alt="Feature 3">
-            <h3>Easy to Use</h3>
-            <p>Our user-friendly interface makes it easy for both students and admins to navigate.</p>
+            <img src="{% static 'images/easy-to-use-1.jpg'%}" alt="Feature 1">
+            <div class="feature-idea">
+                <div>
+                    <h3>Easy to Use</h3>
+                    <p>Our user-friendly interface makes it easy for both students and admins to navigate.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+    <div class="container-3">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="digit">1</div>
+                <h3>Sign Up</h3>
+                <p>Create an account to get started.</p>
+            </div>
+            <div class="step">
+                <div class="digit">2</div>
+                <h3>Join a Class</h3>
+                <p>Find and join your classroom or organization.</p>
+            </div>
+            <div class="step">
+                <div class="digit">3</div>
+                <h3>Stay Updated</h3>
+                <p>Receive class schedules and important announcements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- CALL TO ACTION -->
+
+<section>
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-heading">Join ClassGr Today!</h2>
+            <p class="cta-description">Sign up now and stay on top of your class schedules and assignments. Experience the
+                easiest way to manage your academic commitments.</p>
+            <a href="{% url 'createaccount' %}" class="cta-button">Get Started</a>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+    <div class="container-4">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How do I join a class?</h3>
+            <p>To join a class, simply sign up for an account and search for your class using the class code provided by
+                your administrator.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I view schedules from multiple classes?</h3>
+            <p>Yes, you can join multiple classes and view schedules for each one within your dashboard.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do admins post schedules?</h3>
+            <p>Admins can log in to their account, go to the admin panel, and post or update class schedules as needed.
+            </p>
+        </div>
+        <div class="faq-item">
+            <h3>Is there a mobile app available?</h3>
+            <p>Currently, ClassGr is accessible through our web platform, and we are working on developing a mobile app.
+            </p>
+        </div>
+        <div class="faq-item">
+            <h3>How can I contact support?</h3>
+            <p>If you need assistance, please visit our contact page and fill out the form, or email us at
+                support@classgr.com.</p>
+        </div>
+    </div>
+</section>
+
 
 {% endblock %}
