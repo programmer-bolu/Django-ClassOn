@@ -1,16 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    box-sizing: border-box;
-}
 body {
-    font-family: poppins;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .container {
@@ -27,26 +19,28 @@ h1 {
     color: #139fd7;
 }
 
-.progress-bar {
+.progress-container {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
     margin: 20px 0;
 }
 
-.step {
-    width: 25px;
-    height: 25px;
-    background-color: #ddd;
+.progress-circle {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    border: 5px solid #ddd;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-weight: bold;
 }
 
-.step.active {
-    background-color: #139fd7;
+.progress-text {
+    position: absolute;
+    font-weight: bold;
+    color: #333;
 }
 
 form {
@@ -77,16 +71,9 @@ input[type="password"] {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    outline: none !important;
     border-radius: 4px;
 }
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus{
-    border: thin solid #139fd7;
-}
+
 button {
     padding: 10px 20px;
     margin: 10px 0;
@@ -109,6 +96,7 @@ button.previous:hover {
     background-color: #999;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
@@ -116,6 +104,11 @@ button.previous:hover {
 
     h1 {
         font-size: 1.5em;
+    }
+
+    .progress-circle {
+        width: 40px;
+        height: 40px;
     }
 
     button {
@@ -131,6 +124,11 @@ button.previous:hover {
 
     h1 {
         font-size: 1.2em;
+    }
+
+    .progress-circle {
+        width: 30px;
+        height: 30px;
     }
 
     button {
