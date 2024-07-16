@@ -6,47 +6,42 @@ Create Account | ClassGr
 
 {% block link %}
 {% load static %}
+<link rel="stylesheet" href="{% static 'css/createanaccount.css' %}">
 {% endblock %}
 
 
 {% block content %}
-<div class="container">
-    <section class="account-types">
-        <div class="account-type">
-            <h2>Organization</h2>
-            <p>Manage classes, schedules, and communicate with students. Ideal for schools, colleges, and other
-                educational institutions.</p>
-            <button onclick="selectAccountType('organization')">Select</button>
+<section class="create-account">
+    <div class="container">
+        <div class="account-types">
+            <div class="account-type">
+                <h3>Organization</h3>
+                <p>Manage classes, schedules, and members within your organization. Perfect for schools, colleges, and
+                    other educational institutions.</p>
+                <a href="{% url 'createorganization'%}"><button>Organization</button></a>
+            </div>
+            <div class="account-type">
+                <h3>Student</h3>
+                <p>Join classes, view schedules, and stay updated with your coursework. Ideal for students looking to
+                    keep track of their academic activities.</p>
+                <a href="{% url 'createstudent'%}"><button>Student</button></a>
+            </div>
+            <div class="account-type">
+                <h3>Admin</h3>
+                <p>Oversee the platform, manage users, and ensure everything runs smoothly. Suitable for individuals
+                    responsible for the overall administration.</p>
+                <a href="{% url 'createadmin'%}"><button>Admin</button></a>
+            </div>
+            <div class="account-type">
+                <h3>Instructor</h3>
+                <p>Conduct classes, post schedules, and interact with students. Designed for teachers and instructors.
+                </p>
+                <a href="{% url 'createinstructor'%}"><button>Instructor</button></a>
+            </div>
         </div>
-        <div class="account-type">
-            <h2>Student</h2>
-            <p>Join classes, view schedules, and keep track of your academic progress. Perfect for students at all
-                levels.</p>
-            <button onclick="selectAccountType('student')">Select</button>
-        </div>
-        <div class="account-type">
-            <h2>Admin</h2>
-            <p>Oversee all activities, manage users, and ensure smooth operation of the platform. Suitable for
-                administrators and coordinators.</p>
-            <button onclick="selectAccountType('admin')">Select</button>
-        </div>
-        <div class="account-type">
-            <h2>Instructor</h2>
-            <p>Create and manage classes, upload materials, and interact with students. Designed for teachers and
-                instructors.</p>
-            <button onclick="selectAccountType('instructor')">Select</button>
-        </div>
-    </section>
-
-    <script>
-        function selectAccountType(type) {
-            alert(`You have selected the ${type} account type.`);
-            // Redirect to the appropriate form page based on the selected type
-            // window.location.href = `${type}-signup.html`;
-        }
-    </script>
-
-    </html>
+    </div>
+</section>
+</html>
 
 </div>
 </div>

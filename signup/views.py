@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def organizations(request):
-    return render(request, 'organizatoins.html')
+    return render(request, 'signup-pages/organization.html')
 
 
 def students(request):
