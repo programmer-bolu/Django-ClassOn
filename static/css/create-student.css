@@ -93,11 +93,14 @@ input[type="number"]:focus,
 input[type="password"]:focus {
     border: thin solid #139fd7;
 }
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     display: none;
     visibility: hidden;
     -webkit-appearance: none;
 }
+
 button {
     padding: 10px 20px;
     margin: 10px 0;
@@ -129,7 +132,8 @@ button.previous:hover {
     h1 {
         font-size: 1.3em;
     }
-    h2{
+
+    h2 {
         font-size: 1.1em;
     }
 }

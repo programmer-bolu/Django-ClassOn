@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organization Registration - ClassGr</title>
-    <link rel="stylesheet" href="{% static 'css/create-organization.css' %}">
+    <link rel="stylesheet" href="{% static 'css/create-student.css' %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
@@ -17,53 +17,61 @@
 <body>
     <div class="container">
         <h1>Register Your Organization</h1>
-        
+
         <form id="registrationForm">
             <!-- Basic Information -->
             <div class="form-section">
                 <h2>Basic Information</h2>
-                <input type="text" id="organizationName" name="organizationName" required placeholder="Organization Name" autocomplete="name">
-        
-                <input type="text" id="organizationType" name="organizationType" required placeholder="Organization Type" autocomplete="name">
-        
+                <input type="text" id="organizationName" name="organizationName" required
+                    placeholder="Organization Name" autocomplete="name">
+
+                <input type="text" id="organizationType" name="organizationType" required
+                    placeholder="Organization Type" autocomplete="name">
+
                 <input type="text" id="address" name="address" required placeholder="Address">
-        
+
                 <input type="text" id="city" name="city" required placeholder="City">
-        
+
                 <input type="text" id="state" name="state" required placeholder="State/Province">
-        
+
                 <input type="text" id="country" name="country" required placeholder="Country">
-        
-                <input type="text" id="postalCode" name="postalCode" required placeholder="Postal/ZIP Code" autocomplete="postal-code">
-        
+
+                <input type="text" id="postalCode" name="postalCode" required placeholder="Postal/ZIP Code"
+                    autocomplete="postal-code">
+
                 <button type="button" class="next">Next</button>
             </div>
-        
+
             <!-- Contact Information -->
             <div class="form-section">
                 <h2>Contact Information</h2>
-                <input type="text" id="contactName" name="contactName" required placeholder="Primary Contact Name" autocomplete="name">
-        
-                <input type="text" id="contactPosition" name="contactPosition" required placeholder="Role in Organization" autocomplete='false'>
-        
+                <input type="text" id="contactName" name="contactName" required placeholder="Primary Contact Name"
+                    autocomplete="name">
+
+                <input type="text" id="contactPosition" name="contactPosition" required
+                    placeholder="Role in Organization" autocomplete='false'>
+
                 <input type="email" id="email" name="email" required placeholder="Email Address" autocomplete="email">
-        
-                <input type="tel" id="phone" name="phone"  placeholder="Phone Number" autocomplete="tel">
-        
-                <input type="text" id="secondaryContact" name="secondaryContact" placeholder="Secondary Contact Information">
-        
+
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel">
+
+                <input type="text" id="secondaryContact" name="secondaryContact"
+                    placeholder="Secondary Contact Information">
+
                 <button type="button" class="previous">Previous</button>
                 <button type="button" class="next">Next</button>
             </div>
-        
+
             <!-- Administrative Information -->
             <div class="form-section">
                 <h2>Administrative Information</h2>
                 <input type="number" id="numAdmins" name="numAdmins" required placeholder="Number of Admins">
 
-                <input type="number" id="studentCapacity" name="studentCapacity" required placeholder="Student Capacity">
+                <input type="number" id="studentCapacity" name="studentCapacity" required
+                    placeholder="Student Capacity">
 
-                <input type="number" id="studentCapacity" name="studentCapacity" required placeholder="Instructor Capacity">
+                <input type="number" id="studentCapacity" name="studentCapacity" required
+                    placeholder="Instructor Capacity">
 
                 <button type="button" class="previous">Previous</button>
                 <button type="submit" class="submit">Submit</button>
