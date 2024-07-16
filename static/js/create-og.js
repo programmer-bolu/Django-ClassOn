@@ -10,7 +10,6 @@ function showSection(index) {
     formSections.forEach((section, i) => {
         section.style.display = i === index ? 'block' : 'none';
     });
-    updateProgress(index);
 }
 
 function validateSection(index) {
@@ -22,12 +21,6 @@ function validateSection(index) {
         }
     }
     return true;
-}
-
-function updateProgress(index) {
-    const percentComplete = Math.round(((index + 1) / formSections.length) * 100);
-    progressCircle.style.background = `conic-gradient(#139fd7 ${percentComplete}%, #ddd ${percentComplete}%)`;
-    progressText.textContent = `${percentComplete}%`;
 }
 
 nextButtons.forEach(button => {

@@ -13,35 +13,24 @@
 <body>
     <div class="container">
         <h1>Register Your Organization</h1>
-        <div class="progress-container">
-            <div class="progress-circle">
-                <div class="progress-text">0%</div>
-            </div>
-        </div>
+        
         <form id="registrationForm">
             <!-- Basic Information -->
             <div class="form-section">
                 <h2>Basic Information</h2>
-                <label for="organizationName">Organization Name</label>
-                <input type="text" id="organizationName" name="organizationName" required>
+                <input type="text" id="organizationName" name="organizationName" required placeholder="Organization Name" autocomplete="name">
         
-                <label for="organizationType">Organization Type</label>
-                <input type="text" id="organizationType" name="organizationType" required>
+                <input type="text" id="organizationType" name="organizationType" required placeholder="Organization Type" autocomplete="name">
         
-                <label for="address">Address</label>
-                <input type="text" id="address" name="address" required>
+                <input type="text" id="address" name="address" required placeholder="Address">
         
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" required>
+                <input type="text" id="city" name="city" required placeholder="City">
         
-                <label for="state">State/Province</label>
-                <input type="text" id="state" name="state" required>
+                <input type="text" id="state" name="state" required placeholder="State/Province">
         
-                <label for="country">Country</label>
-                <input type="text" id="country" name="country" required>
+                <input type="text" id="country" name="country" required placeholder="Country">
         
-                <label for="postalCode">Postal/ZIP Code</label>
-                <input type="text" id="postalCode" name="postalCode" required>
+                <input type="text" id="postalCode" name="postalCode" required placeholder="Postal/ZIP Code" autocomplete="postal-code">
         
                 <button type="button" class="next">Next</button>
             </div>
@@ -49,20 +38,15 @@
             <!-- Contact Information -->
             <div class="form-section">
                 <h2>Contact Information</h2>
-                <label for="contactName">Primary Contact Person</label>
-                <input type="text" id="contactName" name="contactName" required>
+                <input type="text" id="contactName" name="contactName" required placeholder="Primary Contact Name" autocomplete="name">
         
-                <label for="contactPosition">Position</label>
-                <input type="text" id="contactPosition" name="contactPosition" required>
+                <input type="text" id="contactPosition" name="contactPosition" required placeholder="Role in Organization" autocomplete='false'>
         
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required placeholder="Email Address" autocomplete="email">
         
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input type="tel" id="phone" name="phone"  placeholder="Phone Number" autocomplete="tel">
         
-                <label for="secondaryContact">Secondary Contact Information</label>
-                <input type="text" id="secondaryContact" name="secondaryContact">
+                <input type="text" id="secondaryContact" name="secondaryContact" placeholder="Secondary Contact Information">
         
                 <button type="button" class="previous">Previous</button>
                 <button type="button" class="next">Next</button>
@@ -71,40 +55,12 @@
             <!-- Administrative Information -->
             <div class="form-section">
                 <h2>Administrative Information</h2>
-                <label for="organizationID">Organization ID</label>
-                <input type="text" id="organizationID" name="organizationID" required>
-        
-                <label for="adminUsername">Admin Username</label>
-                <input type="text" id="adminUsername" name="adminUsername" required>
-        
-                <label for="adminPassword">Admin Password</label>
-                <input type="password" id="adminPassword" name="adminPassword" required>
-        
-                <label for="numAdmins">Number of Admins</label>
-                <input type="number" id="numAdmins" name="numAdmins" required>
-        
-                <button type="button" class="previous">Previous</button>
-                <button type="button" class="next">Next</button>
-            </div>
-        
-            <!-- Operational Information -->
-            <div class="form-section">
-                <h2>Operational Information</h2>
-                <label for="departments">Departments</label>
-                <input type="text" id="departments" name="departments" required>
-        
-                <label for="courses">Courses/Classes Offered</label>
-                <input type="text" id="courses" name="courses" required>
-        
-                <label for="scheduleInfo">Schedule Information</label>
-                <input type="text" id="scheduleInfo" name="scheduleInfo" required>
-        
-                <label for="studentCapacity">Student Capacity</label>
-                <input type="number" id="studentCapacity" name="studentCapacity" required>
-        
-                <label for="instructorDetails">Instructor Details</label>
-                <input type="text" id="instructorDetails" name="instructorDetails" required>
-        
+                <input type="number" id="numAdmins" name="numAdmins" required placeholder="Number of Admins">
+
+                <input type="number" id="studentCapacity" name="studentCapacity" required placeholder="Student Capacity">
+
+                <input type="number" id="studentCapacity" name="studentCapacity" required placeholder="Instructor Capacity">
+
                 <button type="button" class="previous">Previous</button>
                 <button type="submit" class="submit">Submit</button>
             </div>
