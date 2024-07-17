@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organization Registration - ClassGr</title>
-    <link rel="stylesheet" href="{% static 'css/create-student.css' %}">
+    <link rel="stylesheet" href="{% static 'css/create-admin.css' %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
@@ -16,14 +16,15 @@
 
 <body>
     <div class="container">
-        <h1>Register As Student</h1>
+        <h1>Register As Admin</h1>
 
         <form id="registrationForm">
             <!-- Basic Information -->
             <div class="form-section">
                 <input type="text" id="organizationName" name="organizationName" required
                     placeholder="Enter Organization Id" autocomplete="false">
-                <input type="text" id="adminName" name="adminName" autocomplete="false" placeholder="Enter Admin Name>>optional">
+                <input type="text" id="adminName" name="adminName" autocomplete="false"
+                    placeholder="Enter Admin Name>>optional">
                 <button type="button" class="next nex">Next</button>
             </div>
 
