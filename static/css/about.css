@@ -50,87 +50,196 @@ section {
     font-size: 3em;
     color: #139fd7;
 }
-.about-item .about-content p{
+
+.about-item .about-content p {
     font-size: 1.1em;
     line-height: 40px;
     margin-top: 50px;
 }
 
-.image{
+.image {
     background-position: center;
     object-fit: cover;
     aspect-ratio: 1.6;
 }
 
-.image.image-1{
+.image.image-1 {
     background-image: url(../images/about-us-2.jpg);
 }
-.image.image-2{
+
+.image.image-2 {
     background-image: url(../images/about-us-3.jpg);
 }
-.image.image-3{
+
+.image.image-3 {
     background-image: url(../images/about-us-4.jpg);
 }
 
-.about-item:nth-child(odd){
+.image.image-4 {
+    background-image: url(../images/about-us-5.jpg);
+}
+
+.about-item:nth-child(odd) {
     background-color: #139fd7;
 }
-.about-item:nth-child(odd) p{
+
+.about-item:nth-child(odd) p {
     color: white !important;
 }
 
 .values-container {
-  background-color: #139fd7;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  margin: auto;
+    background-color: #139fd7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: auto;
 
 }
 
 .values-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .values-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .value-item {
-  flex: 1 1 calc(33.333% - 40px);
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    flex: 1 1 calc(33.333% - 40px);
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .value-item h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .value-item p {
-  margin: 0;
+    margin: 0;
 }
 
 .value-number {
-  background-color: #137fd7; /* RGB(19, 159, 215) */
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+    background-color: #137fd7;
+    /* RGB(19, 159, 215) */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.contact-us-section {
+    background-color: #1a73e8;
+    /* Updated to a blue shade */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.contact-us-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-us-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.contact-link {
+    display: inline-block;
+    background-color: #004ba0;
+    /* Updated to a darker blue shade */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: #002f6c;
+    /* Updated to a slightly darker shade */
+}
+
+.d-lg-none {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    #about-intro p {
+        width: 100%;
+    }
+
+    .about-item {
+        display: block;
+        padding: 10 !important;
+    }
+
+    .about-item div {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .d-lg-none {
+        display: block;
+    }
+
+    .d-sm-none {
+        display: none;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .values-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-item {
+        margin: 0px;
+        padding: 10px;
+    }
+
+    .about-item div {
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+    }
+}
+@media (max-width: 597px) {
+    .about-item .about-content p{
+        line-height: 25px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: calc(2vw + 8px);
+        text-align: center;
+    }
+    .contact-us-section{
+        display: none;
+    }
 }

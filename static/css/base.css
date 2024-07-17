@@ -3,7 +3,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     text-decoration: none;
     font-family: poppins;
     list-style: none;
@@ -348,7 +348,8 @@ footer p {
 
     .nav-items ul {
         display: block;
-        margin-left: 10px;
+        margin: 0 10px;
+        box-sizing: border-box;
     }
 
     .nav-items ul li {
@@ -359,6 +360,7 @@ footer p {
         display: flex;
         position: relative;
         gap: 20px;
+        border: thin solid red;
     }
 
     .nav-items ul li::before {
@@ -395,8 +397,10 @@ footer p {
 @media (max-width: 568px) {
 
     .nav-items ul li {
+        width: 100%;
         padding: 10px 5px;
         font-size: calc(1vw + 15px);
+        border: thin solid red;
     }
     footer h1{
         font-size: calc(1vw + 10px);
