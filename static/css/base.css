@@ -108,6 +108,7 @@ body {
     display: flex;
     justify-content: center;
     color: white;
+    width: 100%;
 }
 
 .nav-items ul li .tooltip {
@@ -360,7 +361,6 @@ footer p {
         display: flex;
         position: relative;
         gap: 20px;
-        border: thin solid red;
     }
 
     .nav-items ul li::before {
@@ -400,7 +400,6 @@ footer p {
         width: 100%;
         padding: 10px 5px;
         font-size: calc(1vw + 15px);
-        border: thin solid red;
     }
     footer h1{
         font-size: calc(1vw + 10px);
