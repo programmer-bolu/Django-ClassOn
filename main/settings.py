@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ClassGr',
     'signup',
     'login',
+    'organization',
 ]
 
 MIDDLEWARE = [
