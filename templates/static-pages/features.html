@@ -1,10 +1,61 @@
 {% extends 'base.html' %}
 
 {% block pagetitle %}
-    ClassGr - Features
+ClassGr - Features
 {% endblock %}
 
 {% block link %}
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/features.css' %}">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/features.css' %}">
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1>ClassGr Features</h1>
+</header>
+
+<div class="container">
+    <section class="feature" id="feature1">
+        <div class="feature-content">
+            <h2>Feature One</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                ante dapibus diam.</p>
+        </div>
+        <div class="feature-image">
+            <img src="image1.jpg" alt="Feature One Image">
+        </div>
+    </section>
+
+    <section class="feature" id="feature2">
+        <div class="feature-image">
+            <img src="image2.jpg" alt="Feature Two Image">
+        </div>
+        <div class="feature-content">
+            <h2>Feature Two</h2>
+            <p>Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
+                tellus sed augue semper porta.</p>
+        </div>
+    </section>
+
+    <section class="feature" id="feature3">
+        <div class="feature-content">
+            <h2>Feature Three</h2>
+            <p>Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat
+                condimentum velit.</p>
+        </div>
+        <div class="feature-image">
+            <img src="image3.jpg" alt="Feature Three Image">
+        </div>
+    </section>
+
+    <section class="feature" id="feature4">
+        <div class="feature-image">
+            <img src="image4.jpg" alt="Feature Four Image">
+        </div>
+        <div class="feature-content">
+            <h2>Feature Four</h2>
+            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur
+                sodales ligula in libero.</p>
+        </div>
+    </section>
 {% endblock %}

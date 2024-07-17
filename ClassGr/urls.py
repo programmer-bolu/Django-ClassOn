@@ -7,4 +7,5 @@ urlpatterns = [
     path('signup/', TemplateView.as_view(template_name='static-pages/createanaccount.html'), name='createaccount'),
     path('about/', TemplateView.as_view(template_name='static-pages/about.html'), name='about'),
     path('feedback/', TemplateView.as_view(template_name='static-pages/feedback.html'), name='feedback'),
+    path('features/', TemplateView.as_view(template_name='static-pages/features.html'), name='features'),
 ]
