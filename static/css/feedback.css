@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#main-form {
+    background: #fff;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 0 10px 0 #ccc;
+}
+
+#main-form h2 {
+    margin-top: 0;
+}
+
+#main-form input[type="text"],
+#main-form input[type="email"],
+#main-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+#main-form input[type="submit"] {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#main-form input[type="submit"]:hover {
+    background: #555;
+}
+
+.faq,
+.contact-info,
+.privacy-notice {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px 0 #ccc;
+}
+
+.faq h2,
+.contact-info h2,
+.privacy-notice h2 {
+    margin-top: 0;
+}
+
+#main-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+#main-form input[type="file"] {
+    margin: 5px 0 20px 0;
+}
