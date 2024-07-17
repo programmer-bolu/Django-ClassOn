@@ -10,54 +10,47 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div id="main-form">
-            <h2>We Value Your Feedback</h2>
-            <p>Please provide your feedback below:</p>
-            <form action="/submit_feedback" method="post">
-                <label for="name">Name (optional):</label>
-                <input type="text" id="name" name="name">
-    
-                <label for="email">Email (optional):</label>
-                <input type="email" id="email" name="email">
-    
-                <label for="rating">Rating:</label>
-                <input type="text" id="rating" name="rating" placeholder="1-5 stars">
-    
-                <label for="feedback-type">Feedback Type:</label>
-                <select id="feedback-type" name="feedback-type">
-                    <option value="suggestion">Suggestion</option>
-                    <option value="issue">Issue</option>
-                    <option value="compliment">Compliment</option>
-                    <option value="other">Other</option>
-                </select>
-    
-                <label for="comments">Comments:</label>
-                <textarea id="comments" name="comments" rows="5"></textarea>
-    
-                <label for="screenshot">Upload Screenshot (optional):</label>
-                <input type="file" id="screenshot" name="screenshot">
-    
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    
-        <div class="faq">
-            <h2>Frequently Asked Questions (FAQs)</h2>
-            <p><strong>Q: How will my feedback be used?</strong></p>
-            <p>A: Your feedback will help us improve our services and better meet your needs.</p>
-            <!-- Add more FAQs as needed -->
-        </div>
-    
-        <div class="contact-info">
-            <h2>Contact Information</h2>
-            <p>If you have any questions, feel free to contact us at support@classgr.com.</p>
-        </div>
-    
-        <div class="privacy-notice">
-            <h2>Privacy Notice</h2>
-            <p>Your feedback is confidential and will be used solely to improve our services. We will not share your
-                personal information with third parties.</p>
-        </div>
+<div class="container">
+    <div id="main-form">
+        <h2>We Value Your Feedback</h2>
+        <p>Please provide your feedback below:</p>
+        <form action="" method="post">
+            <input type="text" id="name" name="name" placeholder="Name (optional)" autocomplete="name">
+            <input type="email" id="email" name="email" placeholder="Email (optional)" autocomplete="email">
+            <input type="text" id="rating" name="rating" placeholder="Rating (1-5 stars)" autocomplete="off">
+            <select id="feedback-type" name="feedback-type">
+                <option value="" disabled selected>Select Feedback Type</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="issue">Issue</option>
+                <option value="compliment">Compliment</option>
+                <option value="other">Other</option>
+            </select>
+            <textarea id="comments" name="comments" rows="5" placeholder="Comments"></textarea>
+            <button type="button"><label for="screenshot">Select File</label></button>
+            <input type="file" id="screenshot" name="screenshot" style="display: none;">
+            <input type="submit" value="Submit">
+        </form>
     </div>
+
+    <div class="faq">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <p><strong>Q: How will my feedback be used?</strong></p>
+        <p>A: Your feedback will help us improve our services and better meet your needs.</p>
+        <p><strong>Q: Will my feedback be anonymous?</strong></p>
+        <p>A: Yes, you can choose to provide feedback anonymously by leaving the name and email fields blank.</p>
+        <!-- Add more FAQs as needed -->
+    </div>
+
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>If you have any questions, feel free to contact us at <a
+                href="mailto:support@classgr.com">support@classgr.com</a>.</p>
+    </div>
+
+    <div class="privacy-notice">
+        <h2>Privacy Notice</h2>
+        <p>Your feedback is confidential and will be used solely to improve our services. We will not share your
+            personal information with third parties.</p>
+    </div>
+</div>
 {% endblock %}

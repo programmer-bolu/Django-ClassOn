@@ -1,10 +1,6 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+body{
+    font-family: poppins;
 }
-
 .container {
     width: 80%;
     margin: auto;
@@ -24,25 +20,36 @@ body {
 
 #main-form input[type="text"],
 #main-form input[type="email"],
-#main-form textarea {
+#main-form textarea,
+#main-form select {
     width: 100%;
     padding: 10px;
-    margin: 5px 0 20px 0;
+    margin: 10px 0 20px 0;
     display: inline-block;
     border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none !important;
+}
+#main-form input[type="text"]:focus,
+#main-form input[type="email"]:focus,
+#main-form textarea:focus,
+#main-form select:focus{
+    border: thin solid rgb(19, 159, 215);
 }
 
 #main-form input[type="submit"] {
     width: 100%;
-    background: #333;
+    background: rgb(19, 159, 215);
     color: #fff;
     border: 0;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
 }
 
 #main-form input[type="submit"]:hover {
-    background: #555;
+    background: rgb(15, 119, 172);
 }
 
 .faq,
@@ -52,6 +59,7 @@ body {
     padding: 20px;
     margin: 20px 0;
     box-shadow: 0 0 10px 0 #ccc;
+    border-radius: 4px;
 }
 
 .faq h2,
@@ -60,14 +68,81 @@ body {
     margin-top: 0;
 }
 
-#main-form select {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 20px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-}
-
 #main-form input[type="file"] {
     margin: 5px 0 20px 0;
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: rgb(19, 159, 215);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+button[type= 'button']{
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: rgb(15, 119, 172);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    #main-form,
+    .faq,
+    .contact-info,
+    .privacy-notice {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    #main-form input[type="text"],
+    #main-form input[type="email"],
+    #main-form textarea,
+    #main-form select,
+    #main-form input[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #main-form input[type="submit"] {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #main-form,
+    .faq,
+    .contact-info,
+    .privacy-notice {
+        padding: 15px;
+        margin: 15px 0;
+        font-size: calc(2vw + 5px);
+    }
+
+    #main-form input[type="text"],
+    #main-form input[type="email"],
+    #main-form textarea,
+    #main-form select,
+    #main-form input[type="submit"] {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #main-form input[type="submit"] {
+        padding: 10px;
+        font-size: 12px;
+    }
 }
