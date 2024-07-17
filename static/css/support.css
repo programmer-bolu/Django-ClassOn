@@ -1,0 +1,159 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.h {
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border-radius: 10px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.719), rgba(19, 159, 215, 0.685)), url(../images/support-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.support-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.support-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.support-section h2 {
+    color: rgb(19, 159, 215);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.support-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.support-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.support-section ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.support-section a {
+    color: rgb(19, 159, 215);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.support-section a:hover {
+    text-decoration: underline;
+}
+.support-section ul li .pop{
+    position: absolute;
+    background-color: rgb(19, 159, 215);
+    padding: 5px 10px;
+    font-size: .9em;
+    color: white;
+    border-radius: 5px;
+    margin-left: 100px;
+    opacity: 0;
+    transition: .3s;
+    visibility: hidden;
+    top: 0;
+}
+.support-section ul li .pop.show{
+    visibility: visible;
+    opacity: 1;
+    top: -30px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    margin-top: 10px;
+}
+form label:first-child{
+    margin-top: 30px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none !important;
+}
+form input:focus,
+form textarea:focus{
+    border: thin solid rgb(19, 159, 215);
+}
+
+form button {
+    padding: 10px 20px;
+    background: rgb(19, 159, 215);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: rgb(17, 143, 193);
+}
+
+
+@media (max-width: 768px) {
+    .support-section {
+        padding: 10px;
+    }
+
+    .support-section h2 {
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 597px) {
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+    .support-section{
+        width: 100%;
+    }
+}

@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block link %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/support.css' %}">
+{% endblock %}
+
+{% block content %}
+<header class="h">
+    <h1>ClassGr Support</h1>
+</header>
+
+<div class="container">
+    <!-- Contact Information -->
+    <section id="contact-info" class="support-section">
+        <h2>Contact Information</h2>
+        <p>If you need assistance, you can reach us through the following channels:</p>
+        <ul>
+            <li>Email: <a href="mailto:support@classgr.co">support@classgr.co</a></li>
+            <li onclick="copyToClipboard('+234 707 048 7697')">
+                <div class="pop">Copied</div>
+                Phone: <a>+234 707 048 7697</a>
+            </li>
+            <li>Social Media:
+                <a href="https://facebook.com/classgr">Facebook</a>,
+                <a href="https://twitter.com/classgr">Twitter</a>,
+                <a href="https://linkedin.com/company/classgr">LinkedIn</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="support-section">
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions below:</p>
+        <ul>
+            <li><strong>How do I reset my password?</strong>
+                <p>To reset your password, click on 'Forgot Password' on the login page and follow the instructions.</p>
+            </li>
+            <li><strong>How can I join a new class?</strong>
+                <p>To join a new class, go to your dashboard, click 'Join Class', and enter the class code provided by
+                    your instructor.</p>
+            </li>
+            <!-- Add more FAQs as needed -->
+        </ul>
+    </section>
+
+    <!-- Help Center/Knowledge Base -->
+    <section id="help-center" class="support-section">
+        <h2>Help Center</h2>
+        <p>Visit our <a href="/help-center">Help Center</a> for articles, tutorials, and guides.</p>
+    </section>
+
+    <!-- Community Forum -->
+    <section id="community-forum" class="support-section">
+        <h2>Community Forum</h2>
+        <p>Join our <a href="/community-forum">Community Forum</a> to discuss with other users, share tips, and get help
+            from the community.</p>
+    </section>
+
+    <!-- Submit a Ticket -->
+    <section id="submit-ticket" class="support-section">
+        <h2>Submit a Ticket</h2>
+        <p>If you have a specific issue, please fill out the form below, and our support team will get back to you:</p>
+        <form id="form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required autocomplete="email">
+
+            <label for="issue">Issue</label>
+            <textarea id="issue" name="issue" placeholder="Describe your issue" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- User Guides and Manuals -->
+    <section id="user-guides" class="support-section">
+        <h2>User Guides</h2>
+        <p>Download our comprehensive user guides and manuals:</p>
+        <ul>
+            <li><a href="guide1.pdf">User Guide 1</a></li>
+            <li><a href="guide2.pdf">User Guide 2</a></li>
+            <!-- Add more guides as needed -->
+        </ul>
+    </section>
+    <!-- System Status -->
+    <section id="system-status" class="support-section">
+        <h2>System Status</h2>
+        <p>Check the current status of our services <a href="/system-status">here</a>.</p>
+    </section>
+</div>
+
+
+
+
+<script>
+    function copyToClipboard(text) {
+        // Create a temporary textarea element
+        const tempTextarea = document.createElement('textarea');
+        tempTextarea.value = text;
+        document.body.appendChild(tempTextarea);
+
+        // Select the text and copy it to the clipboard
+        tempTextarea.select();
+        document.execCommand('copy');
+
+        // Remove the temporary textarea element
+        document.body.removeChild(tempTextarea);
+
+        // Provide feedback to the user
+        document.querySelector('.pop').classList.add('show')
+        setTimeout(() => {
+            document.querySelector('.pop').classList.remove('show')
+        }, 1000);
+    }
+
+    document.getElementById('form').onsubmit = (e) => {
+        e.preventDefault()
+
+        let subject = 'ClassGr Ticket'
+        let body = `
+        Name: ${e.target.name.value}\n
+        Email: ${e.target.email.value}\n
+        Issue: ${e.target.issue.value}`
+        window.location.href = `mailto:support@classgr.co?subject=${subject}&body=${body}`
+    }
+
+
+</script>
+{% endblock%}

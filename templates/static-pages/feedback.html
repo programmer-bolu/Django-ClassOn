@@ -14,18 +14,18 @@
     <div id="main-form">
         <h2>We Value Your Feedback</h2>
         <p>Please provide your feedback below:</p>
-        <form action="" method="post">
+        <form action="" method="get">
             <input type="text" id="name" name="name" placeholder="Name (optional)" autocomplete="name">
             <input type="email" id="email" name="email" placeholder="Email (optional)" autocomplete="email">
             <input type="text" id="rating" name="rating" placeholder="Rating (1-5 stars)" autocomplete="off">
-            <select id="feedback-type" name="feedback-type" required>
+            <select id="subject" name="subject" required >
                 <option value="" disabled selected>Select Feedback Type</option>
                 <option value="suggestion">Suggestion</option>
                 <option value="issue">Issue</option>
                 <option value="compliment">Compliment</option>
                 <option value="other">Other</option>
             </select>
-            <textarea id="comments" name="comments" rows="5" placeholder="Comments" required></textarea>
+            <textarea id="body" name="body" rows="5" placeholder="Comments" required></textarea>
             <button type="button"><label for="screenshot">Select File</label></button>
             <input type="file" id="screenshot" name="screenshot" style="display: none;">
             <input type="submit" value="Submit">
