@@ -80,7 +80,8 @@ body {
 .support-section a:hover {
     text-decoration: underline;
 }
-.support-section ul li .pop{
+
+.support-section ul li .pop {
     position: absolute;
     background-color: rgb(19, 159, 215);
     padding: 5px 10px;
@@ -93,11 +94,13 @@ body {
     visibility: hidden;
     top: 0;
 }
-.support-section ul li .pop.show{
+
+.support-section ul li .pop.show {
     visibility: visible;
     opacity: 1;
     top: -30px;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -107,7 +110,8 @@ form {
 form label {
     margin-top: 10px;
 }
-form label:first-child{
+
+form label:first-child {
     margin-top: 30px;
 }
 
@@ -119,8 +123,9 @@ form textarea {
     border-radius: 8px;
     outline: none !important;
 }
+
 form input:focus,
-form textarea:focus{
+form textarea:focus {
     border: thin solid rgb(19, 159, 215);
 }
 
@@ -148,12 +153,29 @@ form button:hover {
         font-size: 1.5em;
     }
 }
+
 @media (max-width: 597px) {
     .container {
         width: 100%;
         padding: 0;
     }
-    .support-section{
+
+    .support-section {
         width: 100%;
     }
+
+    .support-section h2 {
+        font-size: 1.4em;
+    }
+
+    .support-section p {
+        font-size: .9em;
+    }
+
+    .support-section ul li {
+        font-size: .8em;
+    }
+        .h{
+            font-size: 1em;
+        }
 }

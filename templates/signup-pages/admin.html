@@ -12,10 +12,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
     <link rel="icon" href="{% static 'images/favicon/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
 </head>
 
 <body>
     <div class="container">
+        <a href="{% url 'home' %}">
+            <h1><i class="fa-solid fa-bell-school"></i></h1>
+        </a>
         <h1>Register As Admin</h1>
 
         <form id="registrationForm">
