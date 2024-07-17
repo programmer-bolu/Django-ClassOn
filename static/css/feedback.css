@@ -12,6 +12,7 @@ body{
     padding: 30px;
     margin: 30px 0;
     box-shadow: 0 0 10px 0 #ccc;
+    border-radius: 5pqex;
 }
 
 #main-form h2 {
