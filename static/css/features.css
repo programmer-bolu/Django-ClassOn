@@ -25,7 +25,7 @@ body {
 }
 
 .feature:hover {
-    transform: translateY(-10px);
+    transform: scale(1.007);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -56,17 +56,20 @@ body {
 }
 
 .feature-image img {
-    max-width: 100%;
+    aspect-ratio: 3 !important;
+    width: 100%;
+    object-fit: cover;
     border-radius: 12px;
 }
 
 @media (max-width: 768px) {
-    .container{
+    .container {
         width: 100%;
         padding: 0;
     }
+
     .feature {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .feature:nth-child(even) {
@@ -81,4 +84,16 @@ body {
         font-size: 1.5em;
     }
 
+}
+
+@media (max-width: 567px) {
+    .feature-content h2 {
+        font-size: 1.2em !important;
+        margin-bottom: 10px;
+    }
+
+    .feature-content p {
+        font-size: .9em;
+        line-height: 1.6;
+    }
 }
